@@ -23,7 +23,7 @@ socket.on('ONLINE_USER', arrUserInfo =>{
 socket.on('SIGN_UP_FAILED', () => alert('Please choose different username!'));
 //openStream by web RTC
 function openStream(){
-    const config = {audio: false, video: true};
+    const config = {audio: true, video: true};
     return navigator.mediaDevices.getUserMedia(config);
 }
 function playStream(idVideotag, stream){
