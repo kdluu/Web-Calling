@@ -34,7 +34,12 @@ function playStream(idVideotag, stream){
 // openStream()
 // .then (stream => playStream('localStream',stream));
 //Create new peer with API from peer.js
-const peer = new Peer({key: 'peerjs',host:'myporfiolio2.herokuapp.com', secure:true,port: 443});
+const peer = new Peer({
+    key: 'peerjs',
+    host:'myporfiolio2.herokuapp.com', 
+    secure: true ,
+    port: 443
+});
 //Listen to peer and append the id to #my-peer tag in index.html 
 peer.on('open', id => {
 $('#my-peer').append(id);
